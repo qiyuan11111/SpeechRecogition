@@ -12,6 +12,6 @@ COPY tomcat/startup.sh /usr/local/apache-tomcat-8.5.69/bin/startup.sh
 COPY tomcat/start.sh /usr/local/apache-tomcat-8.5.69/bin/start.sh
 COPY tomcat/java.security /etc/java-8-openjdk/security/java.security
 COPY imagemagick/policy.xml /etc/ImageMagick-6/policy.xml
-RUN chmod 755 -R /usr/local/apache-tomcat-8.5.69
+RUN chmod 777 -R /usr/local/apache-tomcat-8.5.69
 EXPOSE 8080
 CMD ["/bin/sh", "/usr/local/apache-tomcat-8.5.69/bin/start.sh"]
